@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Organizer System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Organizer System</h1>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search files...">
+            <button onclick="searchFiles()">Search</button>
+        </div>
+
+        <div id="folders" class="folder-container"></div>
+
+        <h2>Files</h2>
+        <div id="fileList" class="file-container"></div>
+
+        <h2>Recycle Bin</h2>
+        <div id="binControls">
+            <button onclick="restoreAllFiles()">Restore All</button>
+            <button onclick="clearBin()">Clear Bin</button>
+        </div>
+        <div id="bin" class="file-container"></div>
+
+        <h2>File History</h2>
+        <ul id="history"></ul>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p id="modalText"></p>
+                <button onclick="confirmAction()">Confirm</button>
+                <button onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
